@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9758DF9625A9430700DCDACA /* PotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9758DF9525A9430700DCDACA /* PotView.swift */; };
+		9792C38825AFD2AA009EB6FA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792C38725AFD2AA009EB6FA /* Data.swift */; };
+		9792C38C25AFD3DC009EB6FA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792C38B25AFD3DC009EB6FA /* ProfileView.swift */; };
 		9798544625A93EFB00F0BCF2 /* Pot_SmackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798544525A93EFB00F0BCF2 /* Pot_SmackApp.swift */; };
 		9798544825A93EFB00F0BCF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798544725A93EFB00F0BCF2 /* ContentView.swift */; };
 		9798544A25A93EFC00F0BCF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9798544925A93EFC00F0BCF2 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		9758DF9525A9430700DCDACA /* PotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotView.swift; sourceTree = "<group>"; };
+		9792C38725AFD2AA009EB6FA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9792C38B25AFD3DC009EB6FA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		9798544225A93EFB00F0BCF2 /* Pot Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pot Smack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9798544525A93EFB00F0BCF2 /* Pot_SmackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pot_SmackApp.swift; sourceTree = "<group>"; };
 		9798544725A93EFB00F0BCF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +47,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9792C38225AFD22B009EB6FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9798544725A93EFB00F0BCF2 /* ContentView.swift */,
+				9758DF9525A9430700DCDACA /* PotView.swift */,
+				9792C38B25AFD3DC009EB6FA /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9792C38425AFD260009EB6FA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				97A20CE225A94BC90052168F /* PlaySound.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9792C38625AFD285009EB6FA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9792C38725AFD2AA009EB6FA /* Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		9798543925A93EFB00F0BCF2 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +92,11 @@
 		9798544425A93EFB00F0BCF2 /* Pot Smack */ = {
 			isa = PBXGroup;
 			children = (
-				97A20CE125A9497B0052168F /* Resources */,
 				9798544525A93EFB00F0BCF2 /* Pot_SmackApp.swift */,
-				9798544725A93EFB00F0BCF2 /* ContentView.swift */,
-				9758DF9525A9430700DCDACA /* PotView.swift */,
-				97A20CE225A94BC90052168F /* PlaySound.swift */,
+				97A20CE125A9497B0052168F /* Resources */,
+				9792C38625AFD285009EB6FA /* Data */,
+				9792C38225AFD22B009EB6FA /* Views */,
+				9792C38425AFD260009EB6FA /* Helpers */,
 				9798544925A93EFC00F0BCF2 /* Assets.xcassets */,
 				9798544E25A93EFC00F0BCF2 /* Info.plist */,
 				9798544B25A93EFC00F0BCF2 /* Preview Content */,
@@ -165,8 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9798544825A93EFB00F0BCF2 /* ContentView.swift in Sources */,
+				9792C38825AFD2AA009EB6FA /* Data.swift in Sources */,
 				97A20CE325A94BC90052168F /* PlaySound.swift in Sources */,
 				9758DF9625A9430700DCDACA /* PotView.swift in Sources */,
+				9792C38C25AFD3DC009EB6FA /* ProfileView.swift in Sources */,
 				9798544625A93EFB00F0BCF2 /* Pot_SmackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

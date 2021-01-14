@@ -21,12 +21,17 @@ struct Shake: GeometryEffect {
 }
 
 struct PotView: View {
+    @EnvironmentObject var data: Data
     @State var attempts = 0
+    @State private var showingProfile = false
     
     var body: some View {
-        VStack {
+        NavigationView {
             Button(action: {
                 withAnimation(.default) {
+                    let rand = Double.random(in: 0.3...0.7)
+                    self.data.count += 1
+                    self.data.seconds += Double(round(rand*1000)/1000)
                     self.attempts += 1
                 }
                 playSound(sound: "pan", type: "mp3")
@@ -34,17 +39,27 @@ struct PotView: View {
                 Image("pot2")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .frame(width: 200, height: 100)
+                    .padding(.bottom)
                     .scaleEffect(0.8)
                     .modifier(Shake(animatableData: CGFloat(attempts)))
             }
+            .padding(.bottom)
+            .toolbar {
+                Button(action: {showingProfile.toggle() }) {
+                    Image(systemName: "person.crop.circle")
+                        .accessibilityLabel("User Profile")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                ProfileView()
+            }
         }
-
     }
 }
 
 struct PotView_Previews: PreviewProvider {
     static var previews: some View {
         PotView()
+            .environmentObject(Data())
     }
 }
