@@ -23,7 +23,7 @@ struct Shake: GeometryEffect {
 struct PotView: View {
     @EnvironmentObject var data: Data
     @State var attempts = 0
-    @State private var showingProfile = false
+    @State var showingProfile = false
     
     var body: some View {
         NavigationView {
@@ -51,7 +51,7 @@ struct PotView: View {
                 }
             }
             .sheet(isPresented: $showingProfile) {
-                ProfileView()
+                ProfileView(showingProfile: self.$showingProfile)
             }
         }
     }
